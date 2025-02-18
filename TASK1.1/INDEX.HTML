@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple NAV Menu</title>
+</head>
+<body>
+    <h1>Simple Navigation Menu</h1>
+    <div id="menu-container"></div>
+    <script>
+          function generateNavigationMenu(pages) {
+                const menu = document.createElement("ul");
+                pages.forEach((page) => {
+                    const item = document.createElement("li");
+                    if (page !== "Home") {
+                        item.innerHTML = `<a href="./${page}.html">${page}</a>`;
+                        menu.appendChild(item);
+                    } else {
+                        item.innerHTML = `<a href="./index.html">Home</a>`;
+                        menu.appendChild(item);
+                    }
+                });
+                document.getElementById("menu-container").appendChild(menu);
+            }
+ 
+            generateNavigationMenu(["Home", "ABOUT", "SERVICE", "CONTACT"]);
+    </script>
+</body>
+</html>
