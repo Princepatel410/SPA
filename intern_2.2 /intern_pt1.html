@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form Validation</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .error { color: red; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <h2>Simple Form</h2>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name">
+        <span class="error" id="nameError"></span>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email">
+        <span class="error" id="emailError"></span>
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event) 
+        {
+            event.preventDefault(); // Prevent form submission
+            
+            let isValid = true;
+            
+            // Get form values
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            
+            // Reset error messages
+            document.getElementById("nameError").textContent = "";
+            document.getElementById("emailError").textContent = "";
+
+            // Validate Name
+            if (name === "") 
+            {
+                document.getElementById("nameError").textContent = "Name is required!";
+                isValid = false;
+            }
+
+            // Validate Email
+            let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (email === "")
+             {
+                document.getElementById("emailError").textContent = "Email is required!";
+                isValid = false;
+            } else if (!email.match(emailPattern)) {
+                document.getElementById("emailError").textContent = "Enter a valid email!";
+                isValid = false;
+            }
+
+            if (isValid)
+             {
+                alert("Form submitted successfully!");
+             }
+        });
+    </script>
+
+</body>
+</html>
