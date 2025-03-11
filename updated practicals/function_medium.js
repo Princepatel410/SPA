@@ -33,12 +33,12 @@ const Array = [1, [2, [3, 4]], 5, [6, [7],[8]],[9]];
 console.log(flatenrecursion(Array));
  
 //curry function
- let mutliply = function(x,y){
-    console.log(x*y);
-}
-let multiplyByTwo = mutliply.bind(this,2);
-multiplyByTwo(5);
-let multiplyByThree = mutliply.bind(this,3);
-multiplyByThree(5);
+//  let mutliply = function(x,y){
+//     console.log(x*y);
+// }
+// let multiplyByTwo = mutliply.bind(this,2);
+// multiplyByTwo(5);
+// let multiplyByThree = mutliply.bind(this,3);
+// multiplyByThree(5);
 
 
