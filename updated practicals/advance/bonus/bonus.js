@@ -1,6 +1,6 @@
 const slides = document.querySelectorAll('.slide');
 let currentSlide = 0;
-let slideInterval = setInterval(nextSlide, 3000); // Auto-slide every 3 seconds
+let slideInterval = setInterval(nextSlide, 3000); 
 
 function showSlide(index) {
   slides.forEach(slide => slide.classList.remove('active'));
