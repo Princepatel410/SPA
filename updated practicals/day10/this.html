@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THIS</title>
+</head>
+<body>
+    <h1> Use of 'this' in Event Listeners</h1>
+    <h3>Lets demo it on elem</h3>
+    <p>this is a sample para</p>
+    <button>Click me</button>
+    <script>
+        let btn = document.querySelector('button');
+        btn.addEventListener('click', function(){
+            console.log(this.innerText);
+            this.style.backgroundColor = 'red'; 
+           
+        });
+    </script>
+    
+</body>
+</html>

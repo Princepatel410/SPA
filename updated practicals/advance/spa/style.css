@@ -1,0 +1,7 @@
+body { font-family: Arial, sans-serif; text-align: center; margin: 0; background: #f8f9fa; }
+nav { background: #007bff; padding: 15px; }
+nav a { color: white; text-decoration: none; margin: 0 15px; font-size: 18px; cursor: pointer; }
+nav a:hover { text-decoration: underline; }
+#content { padding: 200px; }
+#content > div { display: none; }
+#content > div.active { display: block; }

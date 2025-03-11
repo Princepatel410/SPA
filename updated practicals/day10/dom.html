@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .red{
+            color: rgb(243, 92, 11);
+        }
+        .blue{
+            color: blue;
+        }
+        .blackborder
+        {
+            border: 1px solid black;
+            background-color: pink;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let par = document.createElement('p');
+        par.innerHTML = 'Hey im red';
+        document.querySelector('body').appendChild(par);
+        par.classList.add('red');
+
+        let heading = document.createElement('h3');
+        heading.innerHTML = 'I am a blue heading';
+        document.querySelector('body').appendChild(heading);
+        heading.classList.add('blue');
+
+        let div = document.createElement('div');
+        let h1 = document.createElement('h1');
+        let para2 = document.createElement('p');
+        div.classList.add('blackborder');
+        div.classList.add('backgroundColour');
+        document.querySelector('body').appendChild(div);
+        h1.innerHTML = '<h1>i am in a div</h1>';
+        para2.innerHTML = '<p>ME TOO!</p>';
+
+        div.appendChild(h1);
+        div.appendChild(para2); 
+
+        //qs
+        //ans 1
+        let input = document.createElement('input');
+        let button = document.createElement('button');
+        button.innerHTML = 'Click me';
+
+        document.querySelector('body').appendChild(input);
+        document.querySelector('body').appendChild(button);
+
+        //ans2
+        input.setAttribute('placeholder', 'username');
+        input.setAttribute('id', 'btn');
+
+        // //ans3
+        document.querySelector('button');
+        button.classList.add('blackborder');
+        button.classList.add('blue');
+
+        //ans4
+        let h1 = document.createElement('h1');
+        h1.innerHTML = '<u>dom practice</u>';
+        document.querySelector('body').appendChild(h1);
+        h1.classList.add('red');
+
+        //ans5
+        let para = document.createElement('p');
+        para.innerHTML = '<b>Apna college delta  practice</b>'; 
+        document.querySelector('body').appendChild(para);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        label{
+            font-weight: bold;
+        }
+
+        input{
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"]{
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover{
+            background-color: #0056b3;
+        }
+
+        span{
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+</head>
+<body>
+    <h1>form validation</h1>
+    <form action="" id="myform" onsubmit="return validateform()">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name">
+        <span id="nameerror"></span>
+        <br> <br>   
+        <label for="email">Email:</label>   
+        <input type="email" name="email" id="email">
+        <span id="emailerror"></span>
+        <br> <br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password">
+        <span id="passworderror"></span>
+        <br><br>
+        <label for="gender">Gender:</label>
+        <input type="radio" name="male" id="male" value="male"> male 
+        <input type="radio" name="male" id="male" value="female">female
+        <span id="gendererror"></span>
+        <input type="submit" value="submit">
+
+    </form>
+    <script>
+        function validateform(){
+            var name = document.getElementById('name').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var password = document.getElementById('password').value.trim();
+            var nameerror = document.getElementById('nameerror');
+            var emailerror = document.getElementById('emailerror');
+            var passworderror = document.getElementById('passworderror');
+            var gendererror = document.getElementById('gendererror');
+            var valid = true;
+
+            if(name == ""){
+                nameerror.textContent = "Name is required";
+                valid = false;
+            }else{
+                nameerror.textContent = "";
+            }
+
+            if(email == ""){
+                emailerror.textContent = "Email is required";
+                valid = false;
+            }else{
+                emailerror.textContent = "";
+            }
+
+            if(password == ""){
+                passworderror.textContent = "Password is required";
+                valid = false;
+            }else{
+                passworderror.textContent = "";
+            }
+            if(gender == ""){
+                gendererror.textContent = "gener is required";
+                valid = false;
+            }
+            else{
+                gendererror.textContent = "";
+               
+            }
+
+            return valid;
+        }
+    </script>
+</body>
+</html>

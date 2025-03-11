@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Switcher</title>
+    <style>
+        :root {
+            --bg-color: white;
+            --text-color: black;
+        }
+
+        .dark-theme {
+            --bg-color: black;
+            --text-color: white;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            transition: background-color 0.5s, color 0.3s;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            background: var(--text-color);
+            color: var(--bg-color);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Theme Switcher</h1>
+    <button id="theme-switcher">Dark Mode</button>
+    <script>
+        const button = document.getElementById('theme-switcher');
+        const body = document.body;
+
+        button.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            button.innerText = body.classList.contains('dark-theme') ? 'Light Mode' : 'Dark Mode';
+        });
+    </script>
+</body>
+</html>
