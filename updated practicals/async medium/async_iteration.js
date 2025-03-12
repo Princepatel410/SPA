@@ -1,14 +1,20 @@
-async function* asyncCounter() {
+async function* gen() {
+    
     let count = 0;
-    while (true) {
+    while(true)
+    {
+     await new Promise(resolve=> setTimeout(resolve,1000));
         yield count++;
-        await new Promise(resolve => setTimeout(resolve, 1000));
+      
     }
 }
 
-(async () => {
-    for await (const number of asyncCounter()) {
-        console.log(number);
+(async()=> {
+    for await(let values of gen())
+    {
+        console.log(values);
+
+        if(values>=5) break;
+        
     }
-}
-)();
+})();

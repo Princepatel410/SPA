@@ -11,22 +11,22 @@ square(5, result => {
 });
 
 //callback
-function ride(callback) {
-    const arrived = false;
-    if (arrived) {
-        callback(null, "Ride has arrived");
-    }
-    else {
-        callback("Ride was rejected", null);
-    }
-}
-ride((error, message) => {
-    if (error) {
-        console.log("Error: " + error);
-    }
-    else {
-        console.log("Success: " + message);
-    }
-    console.log("Ride has ended");
-}
-);
+// function ride(callback) {
+//     const arrived = false;
+//     if (arrived) {
+//         callback(null, "Ride has arrived");
+//     }
+//     else {
+//         callback("Ride was rejected", null);
+//     }
+// }
+// ride((error, message) => {
+//     if (error) {
+//         console.log("Error: " + error);
+//     }
+//     else {
+//         console.log("Success: " + message);
+//     }
+//     console.log("Ride has ended");
+// }
+// );
