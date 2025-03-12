@@ -13,6 +13,7 @@ async function main() {
     const result = await square(5);
     console.log("Squared value:", result);
 }
+main();
 
 //async await
 //  async function ride() {
