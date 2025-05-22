@@ -1,0 +1,224 @@
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fa;
+  color: #333;
+}
+
+/* Main Container */
+.App {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.8em;
+  color: #333;
+  margin: 30px 0 10px;
+}
+
+/* Form Styling */
+form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+form label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input,
+form select,
+form textarea,
+form button {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* Interests Checkbox Styling */
+form input[type="checkbox"] {
+  width: auto;
+  margin-right: 10px;
+}
+
+form label input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Cards Container */
+/* Cards Container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap; /* Ensures cards wrap to the next line on smaller screens */
+  justify-content: center;
+  gap: 20px; /* Adds spacing between cards */
+}
+
+/* Individual Card */
+.card {
+  background: #c9ccce; /* Light grey background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 300px; /* Fixed width for uniformity */
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: left; /* Align text to the left for better readability */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card p {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #333; /* Ensures good contrast against light grey */
+}
+.card button {
+  padding: 8px 12px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* View Button */
+.card button:nth-child(1) {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.card button:nth-child(1):hover {
+  background-color: #218838;
+}
+
+/* Edit Button */
+.card button:nth-child(2) {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.card button:nth-child(2):hover {
+  background-color: #0056b3;
+}
+
+/* Delete Button */
+.card button:nth-child(3) {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.card button:nth-child(3):hover {
+  background-color: #b02a37;
+}
+
+/* Modal Styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+  width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.modal-content h2 {
+  color: #007bff;
+}
+
+.modal-content p {
+  margin: 10px 0;
+}
+
+.modal-content button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+
+  form {
+    padding: 15px;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+}
+button.selected {
+  background-color: #4CAF50; /* Green color for selected button */
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+}
